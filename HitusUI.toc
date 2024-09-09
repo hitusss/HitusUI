@@ -1,0 +1,8 @@
+## Interface:
+
+## Title: HitusUI
+## Author: hitusss
+## Version: 1.0.0
+## SavedVariables: HitusUIDB
+
+load.xml
