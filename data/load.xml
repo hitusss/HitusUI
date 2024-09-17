@@ -4,6 +4,7 @@
   <Include file="BugSack.lua"/>
   <Include file="Cell.lua"/>
   <Include file="Details.lua"/>
+  <Include file="GladiusEx.lua"/>
   <Include file="OmniBar.lua"/>
   <Include file="OmniCD.lua"/>
   <Include file="OPie.lua"/>

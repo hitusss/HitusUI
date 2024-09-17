@@ -60,3 +60,4 @@ Also here are my [graphics settings](assets/graphics-settings.png?raw=true).
 - [WeakAuras](https://www.curseforge.com/wow/addons/weakauras-2)
 - [World Quests List](https://www.curseforge.com/wow/addons/world-quests-list)
 - [Prat3.0](https://www.curseforge.com/wow/addons/prat-3-0)
+- [GladiusEx](https://www.curseforge.com/wow/addons/gladiusex)
