@@ -3,12 +3,22 @@ Addon.data.Cell = {
     ["showSolo"] = false,
     ["fadeOut"] = false,
     ["hideTooltipsInCombat"] = true,
-    ["alwaysUpdateDebuffs"] = false,
     ["menuPosition"] = "top_bottom",
-    ["enableTooltips"] = true,
-    ["translit"] = false,
-    ["showParty"] = true,
     ["alwaysUpdateBuffs"] = false,
+    ["showParty"] = true,
+    ["showRaid"] = true,
+    ["alwaysUpdateDebuffs"] = false,
+    ["tooltipsPosition"] = {
+      "BOTTOMLEFT",
+      "Default",
+      "TOPLEFT",
+      0,
+      15,
+    },
+    ["alwaysUpdateAuras"] = false,
+    ["enableTooltips"] = true,
+    ["hideBlizzardParty"] = true,
+    ["translit"] = false,
     ["framePriority"] = {
       {
         "Main",
@@ -23,18 +33,9 @@ Addon.data.Cell = {
         false,
       },
     },
-    ["hideBlizzardParty"] = true,
-    ["locked"] = false,
-    ["showRaid"] = true,
     ["useCleuHealthUpdater"] = false,
     ["hideBlizzardRaid"] = true,
-    ["tooltipsPosition"] = {
-      "BOTTOMLEFT",
-      "Default",
-      "TOPLEFT",
-      0,
-      15,
-    },
+    ["locked"] = false,
   },
   ["customTextures"] = {},
   ["indicatorPreview"] = {
@@ -111,6 +112,7 @@ Addon.data.Cell = {
           61999,
         },
       },
+      ["useCommon"] = true,
       [251] = {
         {
           "type1",
@@ -126,7 +128,6 @@ Addon.data.Cell = {
           61999,
         },
       },
-      ["useCommon"] = true,
       ["smartResurrection"] = "disabled",
     },
     ["WARRIOR"] = {
@@ -605,92 +606,6 @@ Addon.data.Cell = {
       },
       ["useCommon"] = true,
     },
-    ["EVOKER"] = {
-      ["alwaysTargeting"] = {
-        [1468] = "disabled",
-        [1465] = "disabled",
-        ["common"] = "disabled",
-        [1473] = "disabled",
-        [1467] = "disabled",
-      },
-      [1468] = {
-        {
-          "type1",
-          "target",
-        },
-        {
-          "type2",
-          "togglemenu",
-        },
-        {
-          "type-shiftR",
-          "spell",
-          361227,
-        },
-      },
-      [1465] = {
-        {
-          "type1",
-          "target",
-        },
-        {
-          "type2",
-          "togglemenu",
-        },
-        {
-          "type-shiftR",
-          "spell",
-          361227,
-        },
-      },
-      ["common"] = {
-        {
-          "type1",
-          "target",
-        },
-        {
-          "type2",
-          "togglemenu",
-        },
-        {
-          "type-shiftR",
-          "spell",
-          361227,
-        },
-      },
-      [1473] = {
-        {
-          "type1",
-          "target",
-        },
-        {
-          "type2",
-          "togglemenu",
-        },
-        {
-          "type-shiftR",
-          "spell",
-          361227,
-        },
-      },
-      ["useCommon"] = true,
-      [1467] = {
-        {
-          "type1",
-          "target",
-        },
-        {
-          "type2",
-          "togglemenu",
-        },
-        {
-          "type-shiftR",
-          "spell",
-          361227,
-        },
-      },
-      ["smartResurrection"] = "disabled",
-    },
     ["MONK"] = {
       [269] = {
         {
@@ -773,6 +688,92 @@ Addon.data.Cell = {
           "type-shiftR",
           "spell",
           115178,
+        },
+      },
+      ["smartResurrection"] = "disabled",
+    },
+    ["EVOKER"] = {
+      ["alwaysTargeting"] = {
+        [1468] = "disabled",
+        [1465] = "disabled",
+        ["common"] = "disabled",
+        [1473] = "disabled",
+        [1467] = "disabled",
+      },
+      [1468] = {
+        {
+          "type1",
+          "target",
+        },
+        {
+          "type2",
+          "togglemenu",
+        },
+        {
+          "type-shiftR",
+          "spell",
+          361227,
+        },
+      },
+      [1465] = {
+        {
+          "type1",
+          "target",
+        },
+        {
+          "type2",
+          "togglemenu",
+        },
+        {
+          "type-shiftR",
+          "spell",
+          361227,
+        },
+      },
+      ["common"] = {
+        {
+          "type1",
+          "target",
+        },
+        {
+          "type2",
+          "togglemenu",
+        },
+        {
+          "type-shiftR",
+          "spell",
+          361227,
+        },
+      },
+      [1473] = {
+        {
+          "type1",
+          "target",
+        },
+        {
+          "type2",
+          "togglemenu",
+        },
+        {
+          "type-shiftR",
+          "spell",
+          361227,
+        },
+      },
+      ["useCommon"] = true,
+      [1467] = {
+        {
+          "type1",
+          "target",
+        },
+        {
+          "type2",
+          "togglemenu",
+        },
+        {
+          "type-shiftR",
+          "spell",
+          361227,
         },
       },
       ["smartResurrection"] = "disabled",
@@ -947,7 +948,7 @@ Addon.data.Cell = {
     },
   },
   ["quickCast"] = {},
-  ["changelogsViewed"] = "r239-release",
+  ["changelogsViewed"] = "r240-release",
   ["crowdControls"] = {
     ["disabled"] = {},
     ["custom"] = {},
@@ -985,6 +986,10 @@ Addon.data.Cell = {
         ["battleground40"] = "Default Raid",
       },
     },
+    ["ROGUE"] = {},
+    ["MAGE"] = {},
+    ["DRUID"] = {},
+    ["DEMONHUNTER"] = {},
   },
   ["targetedSpellsGlow"] = {
     "Pixel",
@@ -999,6 +1004,101 @@ Addon.data.Cell = {
     8,
     2,
   },
+  ["optionsFramePosition"] = {
+    1032,
+    918,
+  },
+  ["dispelRequest"] = {
+    ["enabled"] = false,
+    ["debuffs"] = {},
+    ["timeout"] = 10,
+    ["responseType"] = "all",
+    ["glowOptions"] = {
+      "shine",
+      {
+        {
+          1,
+          0,
+          0.4,
+          1,
+        },
+        0,
+        0,
+        9,
+        0.5,
+        2,
+      },
+    },
+    ["textOptions"] = {
+      "A",
+      {
+        1,
+        0,
+        0,
+        1,
+      },
+      32,
+      "TOPLEFT",
+      "TOPLEFT",
+      -1,
+      5,
+    },
+    ["type"] = "text",
+    ["dispellableByMe"] = true,
+  },
+  ["bigDebuffs"] = {
+    46392,
+    240443,
+    209858,
+    240559,
+  },
+  ["externals"] = {
+    ["disabled"] = {},
+    ["custom"] = {},
+  },
+  ["defensives"] = {
+    ["disabled"] = {},
+    ["custom"] = {},
+  },
+  ["debuffTypeColor"] = {
+    [""] = {
+      ["r"] = 0.8,
+      ["g"] = 0,
+      ["b"] = 0,
+    },
+    ["Disease"] = {
+      ["r"] = 0.6,
+      ["g"] = 0.4,
+      ["b"] = 0,
+    },
+    ["Bleed"] = {
+      ["b"] = 0.6,
+      ["g"] = 0.2,
+      ["r"] = 1,
+    },
+    ["Curse"] = {
+      ["r"] = 0.6,
+      ["g"] = 0,
+      ["b"] = 1,
+    },
+    ["Poison"] = {
+      ["r"] = 0,
+      ["g"] = 0.6,
+      ["b"] = 0,
+    },
+    ["Magic"] = {
+      ["r"] = 0.2,
+      ["g"] = 0.6,
+      ["b"] = 1,
+    },
+    ["none"] = {
+      ["r"] = 0.8,
+      ["g"] = 0,
+      ["b"] = 0,
+    },
+  },
+  ["raidDebuffs"] = {},
+  ["dispelBlacklist"] = {},
   ["appearance"] = {
     ["optionsFontSizeOffset"] = 0,
     ["strata"] = "MEDIUM",
@@ -1110,6 +1210,15 @@ Addon.data.Cell = {
     },
     ["scale"] = 1.4,
     ["outOfRangeAlpha"] = 0.45,
+    ["lossColor"] = {
+      "class_color_dark",
+      {
+        0.667,
+        0,
+        0,
+      },
+    },
+    ["highlightSize"] = 1,
     ["healPrediction"] = {
       true,
       false,
@@ -1120,22 +1229,11 @@ Addon.data.Cell = {
         0.4,
       },
     },
-    ["highlightSize"] = 1,
-    ["lossColor"] = {
-      "class_color_dark",
-      {
-        0.667,
-        0,
-        0,
-      },
-    },
-    ["barColor"] = {
-      "class_color",
-      {
-        0.2,
-        0.2,
-        0.2,
-      },
+    ["mouseoverColor"] = {
+      1,
+      1,
+      1,
+      0.6,
     },
     ["useGameFont"] = true,
     ["lossAlpha"] = 1,
@@ -1156,11 +1254,13 @@ Addon.data.Cell = {
       },
     },
     ["healAbsorbInvertColor"] = false,
-    ["mouseoverColor"] = {
-      1,
-      1,
-      1,
-      0.6,
+    ["barColor"] = {
+      "class_color",
+      {
+        0.2,
+        0.2,
+        0.2,
+      },
     },
     ["healAbsorb"] = {
       true,
@@ -1174,103 +1274,24 @@ Addon.data.Cell = {
     ["barAlpha"] = 1,
     ["overshieldReverseFill"] = false,
   },
-  ["dispelRequest"] = {
-    ["enabled"] = false,
-    ["debuffs"] = {},
-    ["timeout"] = 10,
-    ["responseType"] = "all",
-    ["glowOptions"] = {
-      "shine",
-      {
-        {
-          1,
-          0,
-          0.4,
-          1,
-        },
-        0,
-        0,
-        9,
-        0.5,
-        2,
-      },
-    },
-    ["textOptions"] = {
-      "A",
-      {
-        1,
-        0,
-        0,
-        1,
-      },
-      32,
-      "TOPLEFT",
-      "TOPLEFT",
-      -1,
-      5,
-    },
-    ["type"] = "text",
-    ["dispellableByMe"] = true,
-  },
-  ["bigDebuffs"] = {
-    46392,
-    240443,
-    209858,
-    240559,
-  },
-  ["externals"] = {
-    ["disabled"] = {},
-    ["custom"] = {},
-  },
-  ["defensives"] = {
-    ["disabled"] = {},
-    ["custom"] = {},
-  },
-  ["debuffTypeColor"] = {
-    [""] = {
-      ["r"] = 0.8,
-      ["g"] = 0,
-      ["b"] = 0,
-    },
-    ["Disease"] = {
-      ["r"] = 0.6,
-      ["g"] = 0.4,
-      ["b"] = 0,
-    },
-    ["Bleed"] = {
-      ["b"] = 0.6,
-      ["g"] = 0.2,
-      ["r"] = 1,
-    },
-    ["Curse"] = {
-      ["r"] = 0.6,
-      ["g"] = 0,
-      ["b"] = 1,
-    },
-    ["Poison"] = {
-      ["r"] = 0,
-      ["g"] = 0.6,
-      ["b"] = 0,
-    },
-    ["Magic"] = {
-      ["r"] = 0.2,
-      ["g"] = 0.6,
-      ["b"] = 1,
-    },
-    ["none"] = {
-      ["r"] = 0.8,
-      ["g"] = 0,
-      ["b"] = 0,
-    },
-  },
-  ["raidDebuffs"] = {},
-  ["dispelBlacklist"] = {},
-  ["optionsFramePosition"] = {
-    1032,
-    918,
-  },
   ["layouts"] = {
     ["default"] = {
+      ["npc"] = {
+        ["sameArrangementAsMain"] = true,
+        ["spacingY"] = 3,
+        ["separate"] = false,
+        ["spacingX"] = 3,
+        ["enabled"] = true,
+        ["orientation"] = "vertical",
+        ["sameSizeAsMain"] = true,
+        ["anchor"] = "TOPLEFT",
+        ["position"] = {},
+        ["powerSize"] = 2,
+        ["size"] = {
+          66,
+          46,
+        },
+      },
       ["pet"] = {
         ["sameArrangementAsMain"] = true,
         ["spacingY"] = 3,
@@ -1287,21 +1308,110 @@ Addon.data.Cell = {
           46,
         },
       },
-      ["npc"] = {
+      ["main"] = {
+        ["spacingY"] = 3,
+        ["hideSelf"] = false,
+        ["spacingX"] = 3,
+        ["unitsPerColumn"] = 5,
+        ["maxColumns"] = 8,
+        ["orientation"] = "vertical",
+        ["combineGroups"] = false,
+        ["roleOrder"] = {
+          "TANK",
+          "HEALER",
+          "DAMAGER",
+        },
+        ["sortByRole"] = true,
+        ["groupSpacing"] = 0,
+        ["anchor"] = "TOPLEFT",
+        ["position"] = {
+          6,
+          784,
+        },
+        ["powerSize"] = 2,
+        ["size"] = {
+          110,
+          57,
+        },
+      },
+      ["barOrientation"] = {
+        "horizontal",
+        false,
+      },
+      ["powerFilters"] = {
+        ["DEATHKNIGHT"] = {
+          ["DAMAGER"] = true,
+          ["TANK"] = true,
+        },
+        ["WARRIOR"] = {
+          ["DAMAGER"] = true,
+          ["TANK"] = true,
+        },
+        ["HUNTER"] = true,
+        ["PALADIN"] = {
+          ["DAMAGER"] = true,
+          ["TANK"] = true,
+          ["HEALER"] = true,
+        },
+        ["MAGE"] = true,
+        ["EVOKER"] = {
+          ["DAMAGER"] = true,
+          ["HEALER"] = true,
+        },
+        ["VEHICLE"] = true,
+        ["PRIEST"] = {
+          ["DAMAGER"] = true,
+          ["HEALER"] = true,
+        },
+        ["SHAMAN"] = {
+          ["DAMAGER"] = true,
+          ["HEALER"] = true,
+        },
+        ["PET"] = true,
+        ["WARLOCK"] = true,
+        ["DEMONHUNTER"] = {
+          ["DAMAGER"] = true,
+          ["TANK"] = true,
+        },
+        ["NPC"] = true,
+        ["DRUID"] = {
+          ["DAMAGER"] = true,
+          ["TANK"] = true,
+          ["HEALER"] = true,
+        },
+        ["MONK"] = {
+          ["DAMAGER"] = true,
+          ["TANK"] = true,
+          ["HEALER"] = true,
+        },
+        ["ROGUE"] = true,
+      },
+      ["spotlight"] = {
         ["sameArrangementAsMain"] = true,
         ["spacingY"] = 3,
-        ["separate"] = false,
         ["spacingX"] = 3,
-        ["enabled"] = true,
-        ["orientation"] = "vertical",
+        ["units"] = {},
+        ["enabled"] = false,
+        ["hidePlaceholder"] = false,
         ["sameSizeAsMain"] = true,
-        ["anchor"] = "TOPLEFT",
         ["position"] = {},
+        ["anchor"] = "TOPLEFT",
+        ["orientation"] = "vertical",
         ["powerSize"] = 2,
         ["size"] = {
           66,
           46,
         },
+      },
+      ["groupFilter"] = {
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
       },
       ["indicators"] = {
         {
@@ -1891,12 +2001,7 @@ Addon.data.Cell = {
           ["type"] = "built-in",
           ["enableBlacklistShortcut"] = false,
           ["showDuration"] = false,
-          ["position"] = {
-            "BOTTOMLEFT",
-            "BOTTOMLEFT",
-            1,
-            4,
-          },
+          ["showTooltip"] = false,
           ["showAnimation"] = true,
           ["font"] = {
             {
@@ -1929,9 +2034,14 @@ Addon.data.Cell = {
             },
           },
           ["name"] = "Debuffs",
-          ["showTooltip"] = false,
-          ["indicatorName"] = "debuffs",
+          ["position"] = {
+            "BOTTOMLEFT",
+            "BOTTOMLEFT",
+            1,
+            4,
+          },
           ["orientation"] = "left-to-right",
+          ["indicatorName"] = "debuffs",
           ["enabled"] = false,
           ["size"] = {
             {
@@ -1951,7 +2061,12 @@ Addon.data.Cell = {
           ["type"] = "built-in",
           ["border"] = 2,
           ["showDuration"] = true,
-          ["showTooltip"] = false,
+          ["position"] = {
+            "CENTER",
+            "CENTER",
+            0,
+            3,
+          },
           ["font"] = {
             {
               "Cell Default",
@@ -1983,14 +2098,9 @@ Addon.data.Cell = {
             },
           },
           ["name"] = "Raid Debuffs",
-          ["position"] = {
-            "CENTER",
-            "CENTER",
-            0,
-            3,
-          },
-          ["indicatorName"] = "raidDebuffs",
+          ["showTooltip"] = false,
           ["orientation"] = "left-to-right",
+          ["indicatorName"] = "raidDebuffs",
           ["onlyShowTopGlow"] = true,
           ["size"] = {
             22,
@@ -2126,9 +2236,9 @@ Addon.data.Cell = {
             0,
             0,
           },
-          ["indicatorName"] = "crowdControls",
-          ["showDuration"] = true,
           ["orientation"] = "left-to-right",
+          ["showDuration"] = true,
+          ["indicatorName"] = "crowdControls",
           ["size"] = {
             22,
             22,
@@ -2292,111 +2402,6 @@ Addon.data.Cell = {
           },
           ["numPerLine"] = 5,
           ["num"] = 5,
-        },
-      },
-      ["barOrientation"] = {
-        "horizontal",
-        false,
-      },
-      ["spotlight"] = {
-        ["sameArrangementAsMain"] = true,
-        ["spacingY"] = 3,
-        ["spacingX"] = 3,
-        ["units"] = {},
-        ["enabled"] = false,
-        ["hidePlaceholder"] = false,
-        ["position"] = {},
-        ["sameSizeAsMain"] = true,
-        ["orientation"] = "vertical",
-        ["anchor"] = "TOPLEFT",
-        ["powerSize"] = 2,
-        ["size"] = {
-          66,
-          46,
-        },
-      },
-      ["powerFilters"] = {
-        ["DEATHKNIGHT"] = {
-          ["DAMAGER"] = true,
-          ["TANK"] = true,
-        },
-        ["WARRIOR"] = {
-          ["DAMAGER"] = true,
-          ["TANK"] = true,
-        },
-        ["HUNTER"] = true,
-        ["ROGUE"] = true,
-        ["MAGE"] = true,
-        ["EVOKER"] = {
-          ["DAMAGER"] = true,
-          ["HEALER"] = true,
-        },
-        ["VEHICLE"] = true,
-        ["PRIEST"] = {
-          ["DAMAGER"] = true,
-          ["HEALER"] = true,
-        },
-        ["SHAMAN"] = {
-          ["DAMAGER"] = true,
-          ["HEALER"] = true,
-        },
-        ["PET"] = true,
-        ["WARLOCK"] = true,
-        ["DEMONHUNTER"] = {
-          ["DAMAGER"] = true,
-          ["TANK"] = true,
-        },
-        ["NPC"] = true,
-        ["DRUID"] = {
-          ["DAMAGER"] = true,
-          ["TANK"] = true,
-          ["HEALER"] = true,
-        },
-        ["MONK"] = {
-          ["DAMAGER"] = true,
-          ["TANK"] = true,
-          ["HEALER"] = true,
-        },
-        ["PALADIN"] = {
-          ["DAMAGER"] = true,
-          ["TANK"] = true,
-          ["HEALER"] = true,
-        },
-      },
-      ["groupFilter"] = {
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-      },
-      ["main"] = {
-        ["spacingY"] = 3,
-        ["hideSelf"] = false,
-        ["spacingX"] = 3,
-        ["unitsPerColumn"] = 5,
-        ["maxColumns"] = 8,
-        ["sortByRole"] = true,
-        ["combineGroups"] = false,
-        ["roleOrder"] = {
-          "TANK",
-          "HEALER",
-          "DAMAGER",
-        },
-        ["orientation"] = "vertical",
-        ["position"] = {
-          8,
-          808,
-        },
-        ["anchor"] = "TOPLEFT",
-        ["groupSpacing"] = 0,
-        ["powerSize"] = 2,
-        ["size"] = {
-          110,
-          57,
         },
       },
     },
@@ -2989,12 +2994,7 @@ Addon.data.Cell = {
           ["type"] = "built-in",
           ["enableBlacklistShortcut"] = false,
           ["showDuration"] = false,
-          ["position"] = {
-            "BOTTOMLEFT",
-            "BOTTOMLEFT",
-            1,
-            4,
-          },
+          ["showTooltip"] = false,
           ["showAnimation"] = true,
           ["font"] = {
             {
@@ -3027,9 +3027,14 @@ Addon.data.Cell = {
             },
           },
           ["name"] = "Debuffs",
-          ["showTooltip"] = false,
-          ["indicatorName"] = "debuffs",
+          ["position"] = {
+            "BOTTOMLEFT",
+            "BOTTOMLEFT",
+            1,
+            4,
+          },
           ["orientation"] = "left-to-right",
+          ["indicatorName"] = "debuffs",
           ["enabled"] = false,
           ["size"] = {
             {
@@ -3049,7 +3054,12 @@ Addon.data.Cell = {
           ["type"] = "built-in",
           ["border"] = 2,
           ["showDuration"] = true,
-          ["showTooltip"] = false,
+          ["position"] = {
+            "CENTER",
+            "CENTER",
+            0,
+            3,
+          },
           ["font"] = {
             {
               "Cell Default",
@@ -3081,14 +3091,9 @@ Addon.data.Cell = {
             },
           },
           ["name"] = "Raid Debuffs",
-          ["position"] = {
-            "CENTER",
-            "CENTER",
-            0,
-            3,
-          },
-          ["indicatorName"] = "raidDebuffs",
+          ["showTooltip"] = false,
           ["orientation"] = "left-to-right",
+          ["indicatorName"] = "raidDebuffs",
           ["onlyShowTopGlow"] = true,
           ["size"] = {
             22,
@@ -3224,9 +3229,9 @@ Addon.data.Cell = {
             0,
             0,
           },
-          ["indicatorName"] = "crowdControls",
-          ["showDuration"] = true,
           ["orientation"] = "left-to-right",
+          ["showDuration"] = true,
+          ["indicatorName"] = "crowdControls",
           ["size"] = {
             22,
             22,
@@ -3412,20 +3417,20 @@ Addon.data.Cell = {
         ["spacingX"] = 3,
         ["unitsPerColumn"] = 5,
         ["maxColumns"] = 8,
-        ["sortByRole"] = false,
+        ["orientation"] = "horizontal",
         ["combineGroups"] = false,
         ["roleOrder"] = {
           "TANK",
           "HEALER",
           "DAMAGER",
         },
-        ["orientation"] = "horizontal",
-        ["position"] = {
-          8,
-          809,
-        },
-        ["anchor"] = "TOPLEFT",
+        ["sortByRole"] = false,
         ["groupSpacing"] = 0,
+        ["anchor"] = "TOPLEFT",
+        ["position"] = {
+          6,
+          786,
+        },
         ["powerSize"] = 2,
         ["size"] = {
           70,
@@ -3439,10 +3444,10 @@ Addon.data.Cell = {
         ["units"] = {},
         ["enabled"] = false,
         ["hidePlaceholder"] = false,
-        ["position"] = {},
         ["sameSizeAsMain"] = true,
-        ["orientation"] = "vertical",
+        ["position"] = {},
         ["anchor"] = "TOPLEFT",
+        ["orientation"] = "vertical",
         ["powerSize"] = 2,
         ["size"] = {
           66,
@@ -3459,7 +3464,11 @@ Addon.data.Cell = {
           ["TANK"] = true,
         },
         ["HUNTER"] = true,
-        ["ROGUE"] = true,
+        ["PALADIN"] = {
+          ["DAMAGER"] = true,
+          ["TANK"] = true,
+          ["HEALER"] = true,
+        },
         ["MAGE"] = true,
         ["EVOKER"] = {
           ["DAMAGER"] = true,
@@ -3491,11 +3500,7 @@ Addon.data.Cell = {
           ["TANK"] = true,
           ["HEALER"] = true,
         },
-        ["PALADIN"] = {
-          ["DAMAGER"] = true,
-          ["TANK"] = true,
-          ["HEALER"] = true,
-        },
+        ["ROGUE"] = true,
       },
       ["pet"] = {
         ["sameArrangementAsMain"] = true,
@@ -3532,7 +3537,7 @@ Addon.data.Cell = {
       },
     },
   },
-  ["revise"] = "r239-release",
+  ["revise"] = "r240-release",
   ["targetedSpellsList"] = {
     106823,
     106841,
