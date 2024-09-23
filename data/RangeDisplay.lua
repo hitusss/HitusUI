@@ -2,21 +2,19 @@ Addon.data.RangeDisplay = {
   ["locked"] = true,
   ["mute"] = true,
   ["units"] = {
-    ["pet"] = {},
-    ["playertarget"] = {
-      ["fontSize"] = 16,
-      ["point"] = "BOTTOM",
-      ["relPoint"] = "BOTTOM",
-      ["y"] = 212.8337860107422,
-      ["x"] = -2.50001859664917,
+    ["mouseover"] = {
+      ["enabled"] = false,
     },
     ["arena2"] = {},
     ["focus"] = {
       ["enabled"] = false,
     },
-    ["mouseover"] = {
-      ["enabled"] = false,
+    ["playertarget"] = {
+      ["fontSize"] = 16,
+      ["x"] = -380.8331298828125,
+      ["y"] = -144.1662139892578,
     },
+    ["pet"] = {},
     ["arena5"] = {},
     ["arena4"] = {},
   },
