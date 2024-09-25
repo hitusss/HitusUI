@@ -13,6 +13,7 @@ Also here are my [graphics settings](assets/graphics-settings.png?raw=true).
 
 - [AdvancedInterfaceOptions](https://www.curseforge.com/wow/addons/advancedinterfaceoptions)
 - [ALL THE THINGS](https://www.curseforge.com/wow/addons/all-the-things)
+- [AlterEgo](https://www.curseforge.com/wow/addons/alterego)
 - [Altoholic](https://www.curseforge.com/wow/addons/altoholic)
 - [Auctionator](https://www.curseforge.com/wow/addons/auctionator)
 - [Baganator](https://www.curseforge.com/wow/addons/baganator)
