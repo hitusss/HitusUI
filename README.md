@@ -64,3 +64,7 @@ Also here are my [graphics settings](assets/graphics-settings.png?raw=true).
 1. [WarpDeplete](https://www.curseforge.com/wow/addons/warpdeplete)
 1. [WeakAuras](https://www.curseforge.com/wow/addons/weakauras-2)
 1. [World Quests List](https://www.curseforge.com/wow/addons/world-quests-list)
+
+## Icons
+
+If you looking for some better quality icons in game check this [github repo](https://github.com/kodewdle/IconPacks)
