@@ -19,6 +19,7 @@ Also here are my [graphics settings](assets/graphics-settings.png?raw=true).
 1. [Baganator](https://www.curseforge.com/wow/addons/baganator)
 1. [Better Wardrobe and Transmog](https://www.curseforge.com/wow/addons/better-wardrobe-and-transmog)
 1. [BetterBlizzFrames](https://www.curseforge.com/wow/addons/betterblizzframes)
+1. [BetterCharacterPanel](https://www.curseforge.com/wow/addons/bettercharacterpanel)
 1. [BigWigs](https://www.curseforge.com/wow/addons/big-wigs)
 1. [BtWQuests](https://www.curseforge.com/wow/addons/btw-quests)
 1. [BugGrabber](https://www.curseforge.com/wow/addons/bug-grabber)
