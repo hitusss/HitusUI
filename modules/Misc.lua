@@ -9,8 +9,7 @@ local function ClenupBars()
 end
 
 local function ResetCVars()
-  --TODO: implement reset CVars
-  -- /console cvar_default
+  ConsoleExec("cvar_default")
   Addon:Notice("CVar reset complete!")
 end
 
