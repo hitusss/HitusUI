@@ -14,6 +14,26 @@ local function ResetCVars()
   Addon:Notice("CVar reset complete!")
 end
 
+local function GetJoinedChannels()
+  local channels = {}
+  local chanList = { GetChannelList() }
+  for i = 1, #chanList, 3 do
+    table.insert(channels, {
+      id = chanList[i],
+      name = chanList[i + 1],
+      isDisabled = chanList[i + 2],
+    })
+  end
+  return channels
+end
+
+local function LeaveChats()
+  local channels = GetJoinedChannels()
+  for _, channel in pairs(channels) do
+    LeaveChannelByName(channel.name)
+  end
+end
+
 Addon.module[name] = {
   order = 1,
   name = name,
@@ -36,5 +56,12 @@ Addon.module[name] = {
       Addon:Warning("Are you sure you want to reset your all CVars? This step is irreversible.", ResetCVars)
     end)
     container:AddChild(resetCVarsButton)
+
+    local LeaveChatsButton = AceGUI:Create("Button")
+    LeaveChatsButton:SetText("Leave Chats")
+    LeaveChatsButton:SetCallback("OnClick", function()
+      LeaveChats()
+    end)
+    container:AddChild(LeaveChatsButton)
   end,
 }
