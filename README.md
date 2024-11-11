@@ -5,9 +5,9 @@ importing and loading addon profiles. It provides a user-friendly interface
 for applying or loading various addon configurations, allowing
 players to quickly set up their characters and make them more productive.
 
-![Game UI Preview](assets/preview.jpg?raw=true)
+![Game UI Preview](preview.jpg?raw=true)
 
-Also here are my [graphics settings](assets/graphics-settings.png?raw=true).
+Also here are my [graphics settings](graphics-settings.png?raw=true).
 
 ## Addons list
 
