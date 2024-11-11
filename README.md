@@ -7,7 +7,7 @@ players to quickly set up their characters and make them more productive.
 
 ![Game UI Preview](preview.jpg?raw=true)
 
-Also here are my [graphics settings](graphics-settings.png?raw=true).
+Also here are my [graphics settings](graphics.md).
 
 ## Addons list
 
