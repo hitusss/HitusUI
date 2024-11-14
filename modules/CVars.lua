@@ -2,6 +2,7 @@ local name = "CVars"
 
 local function setupCVars()
   SetCVar("playIntroMovie", 0)
+  SetCVar("advancedCombatLogging", 1)
 
   SetCVar("showTutorials", 0)
   SetCVar("showNPETutorials", 0)
