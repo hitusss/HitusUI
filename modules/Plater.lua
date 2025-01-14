@@ -7,13 +7,14 @@ Addon.module[name] = {
     return C_AddOns.GetAddOnEnableState(name, Addon.MyName) == 2
   end,
   import = function(self)
-    PlaterDB.profiles["Luxthos"] = Addon.data[name]
+    PlaterDB.profiles["HitusUI"] = Addon.data[name].HitusUI
+    PlaterDB.profiles["Luxthos"] = Addon.data[name].Luxthos
     Addon.db.global.loaded[name] = name
     self:load()
   end,
   load = function(self)
     Addon.shouldReload = true
-    Addon:SetProfileKeys(PlaterDB, "Luxthos")
+    Addon:SetProfileKeys(PlaterDB, "HitusUI")
     Addon:Notice(format("%s setup complete!", name))
   end,
   render = function(self, container)
