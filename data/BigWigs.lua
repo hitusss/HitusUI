@@ -1,13 +1,24 @@
 Addon.data.BigWigs = {
   ["namespaces"] = {
     ["BigWigs_Plugins_Victory"] = {},
-    ["LibDualSpec-1.0"] = {},
+    ["BigWigs_Plugins_BossBlock"] = {},
     ["BigWigs_Plugins_Sounds"] = {},
-    ["BigWigs_Plugins_Statistics"] = {},
+    ["BigWigs_Plugins_AutoReply"] = {},
     ["BigWigs_Plugins_Countdown"] = {},
-    ["BigWigs_Plugins_AltPower"] = {},
+    ["BigWigs_Plugins_AltPower"] = {
+      ["profiles"] = {
+        ["HitusUI"] = {
+          ["position"] = {
+            "BOTTOM",
+            "BOTTOM",
+            -341.6657104492188,
+            223.999755859375,
+          },
+        },
+      },
+    },
     ["BigWigs_Plugins_Colors"] = {},
-    ["BigWigs_Plugins_Wipe"] = {},
+    ["BigWigs_Plugins_Raid Icons"] = {},
     ["BigWigs_Plugins_InfoBox"] = {},
     ["BigWigs_Plugins_Bars"] = {
       ["profiles"] = {
@@ -15,13 +26,13 @@ Addon.data.BigWigs = {
           ["emphasizeGrowup"] = true,
           ["expWidth"] = 190,
           ["growup"] = true,
-          ["normalWidth"] = 270,
           ["expPosition"] = {
             nil,
             nil,
             315,
             -143,
           },
+          ["normalWidth"] = 270,
           ["normalPosition"] = {
             "RIGHT",
             "RIGHT",
@@ -34,22 +45,23 @@ Addon.data.BigWigs = {
     ["BigWigs_Plugins_Nameplates"] = {
       ["profiles"] = {
         ["HitusUI"] = {
-          ["iconOffsetY"] = -4,
+          ["iconOffsetX"] = 6,
         },
       },
     },
-    ["BigWigs_Plugins_AutoReply"] = {},
-    ["BigWigs_Plugins_Raid Icons"] = {},
-    ["BigWigs_Plugins_Proximity"] = {},
+    ["BigWigs_Plugins_Statistics"] = {},
     ["BigWigs_Plugins_Messages"] = {},
+    ["BigWigs_Plugins_Proximity"] = {},
+    ["BigWigs_Plugins_Wipe"] = {},
     ["BigWigs_Plugins_Pull"] = {},
-    ["BigWigs_Plugins_BossBlock"] = {},
+    ["LibDualSpec-1.0"] = {},
   },
   ["profileKeys"] = {},
   ["global"] = {
     ["watchedMovies"] = {
-      [-2296] = true,
       [-2292] = true,
+      [-2296] = true,
+      [-437] = true,
     },
   },
   ["profiles"] = {
