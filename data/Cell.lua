@@ -1,7 +1,12 @@
 Addon.data.Cell = {
-  ["fallbackInMythic"] = false,
-  ["customTextures"] = {
+  ["snippets"] = {
+    [0] = {
+      ["autorun"] = true,
+      ["code"] =
+      "-- snippets can be found at https://github.com/enderneko/Cell/tree/master/.snippets\n-- use \"/run CellDB['snippets'][0]=nil ReloadUI()\" to reset this snippet\n\n-- cooldown style for icon/block indicators (\"VERTICAL\", \"CLOCK\")\nCELL_COOLDOWN_STYLE = \"VERTICAL\"\n\n-- fade out unit button if hp percent > (number: 0-1)\nCELL_FADE_OUT_HEALTH_PERCENT = nil\n\n-- add summon icons to Status Icon indicator (boolean, retail only)\nCELL_SUMMON_ICONS_ENABLED = false\n\n-- use separate width and height for custom indicator icons (boolean)\nCELL_RECTANGULAR_CUSTOM_INDICATOR_ICONS = false\n\n-- Use nicknames from Details! Damage Meter (boolean, NickTag-1.0 library)\nCELL_NICKTAG_ENABLED = false\n\n-- remove raid setup details from the tooltip of the Raid button (boolean)\nCELL_TOOLTIP_REMOVE_RAID_SETUP_DETAILS = false\n\n-- border thickness: unit button and icon (number)\nCELL_BORDER_SIZE = 1\n\n-- unit button border color ({r, g, b, a}, number: 0-1)\nCELL_BORDER_COLOR = {0, 0, 0, 1}\n\n-- show raid pet owner name (\"VEHICLE\", \"NAME\", nil)\nCELL_SHOW_GROUP_PET_OWNER_NAME = nil\n\n-- use LibHealComm (boolean, non-retail)\nCELL_USE_LIBHEALCOMM = false",
+    },
   },
+  ["fallbackInMythic"] = false,
   ["general"] = {
     ["fadeOut"] = false,
     ["hideTooltipsInCombat"] = true,
@@ -36,11 +41,7 @@ Addon.data.Cell = {
       15,
     },
   },
-  ["bigDebuffs"] = {
-    46392,
-    240443,
-    209858,
-    240559,
+  ["customTextures"] = {
   },
   ["layouts"] = {
     ["default"] = {
@@ -99,7 +100,7 @@ Addon.data.Cell = {
         ["position"] = {
           "TOPLEFT",
           348.3,
-          -272.5,
+          -274.2,
         },
         ["powerSize"] = 2,
         ["size"] = {
@@ -493,20 +494,20 @@ Addon.data.Cell = {
           ["frameLevel"] = 5,
           ["name"] = "Role Icon",
           ["position"] = {
-            "TOPLEFT",
+            "BOTTOMLEFT",
             "button",
-            "TOPLEFT",
-            0,
-            0,
+            "BOTTOMLEFT",
+            -7,
+            14,
           },
           ["indicatorName"] = "roleIcon",
           ["size"] = {
-            18,
-            18,
+            14,
+            14,
           },
           ["type"] = "built-in",
           ["roleTexture"] = {
-            "default2",
+            "blizzard3",
             "Interface\\AddOns\\ElvUI\\Core\\Media\\Textures\\Tank.tga",
             "Interface\\AddOns\\ElvUI\\Core\\Media\\Textures\\Healer.tga",
             "Interface\\AddOns\\ElvUI\\Core\\Media\\Textures\\DPS.tga",
@@ -517,17 +518,17 @@ Addon.data.Cell = {
           ["type"] = "built-in",
           ["name"] = "Leader Icon",
           ["position"] = {
-            "TOPRIGHT",
+            "TOPLEFT",
             "button",
-            "TOPRIGHT",
-            0,
-            0,
+            "TOPLEFT",
+            4,
+            -3,
           },
           ["indicatorName"] = "leaderIcon",
           ["hideInCombat"] = false,
           ["size"] = {
-            16,
-            16,
+            11,
+            11,
           },
         },
         {
@@ -672,7 +673,7 @@ Addon.data.Cell = {
           ["onlyShowOvershields"] = false,
         },
         {
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["type"] = "built-in",
           ["name"] = "AoE Healing",
           ["indicatorName"] = "aoeHealing",
@@ -684,7 +685,7 @@ Addon.data.Cell = {
           },
         },
         {
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["type"] = "built-in",
           ["frameLevel"] = 10,
           ["glowOptions"] = {
@@ -745,7 +746,7 @@ Addon.data.Cell = {
           },
         },
         {
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["type"] = "built-in",
           ["frameLevel"] = 10,
           ["glowOptions"] = {
@@ -867,7 +868,7 @@ Addon.data.Cell = {
           },
         },
         {
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["type"] = "built-in",
           ["name"] = "Tank Active Mitigation",
           ["position"] = {
@@ -970,7 +971,7 @@ Addon.data.Cell = {
           },
           ["orientation"] = "left-to-right",
           ["indicatorName"] = "debuffs",
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["size"] = {
             {
               13,
@@ -983,7 +984,7 @@ Addon.data.Cell = {
           },
         },
         {
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["num"] = 1,
           ["frameLevel"] = 20,
           ["type"] = "built-in",
@@ -1037,7 +1038,7 @@ Addon.data.Cell = {
           },
         },
         {
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["type"] = "built-in",
           ["name"] = "Private Auras",
           ["position"] = {
@@ -1129,7 +1130,7 @@ Addon.data.Cell = {
           ["type"] = "built-in",
           ["frameLevel"] = 20,
           ["border"] = 2,
-          ["enabled"] = false,
+          ["enabled"] = true,
           ["num"] = 3,
           ["font"] = {
             {
@@ -1178,14 +1179,14 @@ Addon.data.Cell = {
           },
         },
         {
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["type"] = "built-in",
           ["name"] = "Actions",
           ["indicatorName"] = "actions",
           ["speed"] = 1,
         },
         {
-          ["enabled"] = false,
+          ["enabled"] = true,
           ["type"] = "built-in",
           ["name"] = "Missing Buffs",
           ["position"] = {
@@ -1647,20 +1648,20 @@ Addon.data.Cell = {
           ["frameLevel"] = 5,
           ["name"] = "Role Icon",
           ["position"] = {
-            "TOPLEFT",
+            "BOTTOMLEFT",
             "button",
-            "TOPLEFT",
-            0,
-            0,
+            "BOTTOMLEFT",
+            -7,
+            14,
           },
           ["indicatorName"] = "roleIcon",
           ["size"] = {
-            18,
-            18,
+            14,
+            14,
           },
           ["type"] = "built-in",
           ["roleTexture"] = {
-            "default2",
+            "blizzard3",
             "Interface\\AddOns\\ElvUI\\Core\\Media\\Textures\\Tank.tga",
             "Interface\\AddOns\\ElvUI\\Core\\Media\\Textures\\Healer.tga",
             "Interface\\AddOns\\ElvUI\\Core\\Media\\Textures\\DPS.tga",
@@ -1671,17 +1672,17 @@ Addon.data.Cell = {
           ["type"] = "built-in",
           ["name"] = "Leader Icon",
           ["position"] = {
-            "TOPRIGHT",
+            "TOPLEFT",
             "button",
-            "TOPRIGHT",
-            0,
-            0,
+            "TOPLEFT",
+            4,
+            -3,
           },
           ["indicatorName"] = "leaderIcon",
           ["hideInCombat"] = false,
           ["size"] = {
-            16,
-            16,
+            11,
+            11,
           },
         },
         {
@@ -1826,7 +1827,7 @@ Addon.data.Cell = {
           ["onlyShowOvershields"] = false,
         },
         {
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["type"] = "built-in",
           ["name"] = "AoE Healing",
           ["indicatorName"] = "aoeHealing",
@@ -1838,7 +1839,7 @@ Addon.data.Cell = {
           },
         },
         {
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["type"] = "built-in",
           ["frameLevel"] = 10,
           ["glowOptions"] = {
@@ -1899,7 +1900,7 @@ Addon.data.Cell = {
           },
         },
         {
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["type"] = "built-in",
           ["frameLevel"] = 10,
           ["glowOptions"] = {
@@ -2021,7 +2022,7 @@ Addon.data.Cell = {
           },
         },
         {
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["type"] = "built-in",
           ["name"] = "Tank Active Mitigation",
           ["position"] = {
@@ -2124,7 +2125,7 @@ Addon.data.Cell = {
           },
           ["orientation"] = "left-to-right",
           ["indicatorName"] = "debuffs",
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["size"] = {
             {
               13,
@@ -2137,7 +2138,7 @@ Addon.data.Cell = {
           },
         },
         {
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["num"] = 1,
           ["frameLevel"] = 20,
           ["type"] = "built-in",
@@ -2191,7 +2192,7 @@ Addon.data.Cell = {
           },
         },
         {
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["type"] = "built-in",
           ["name"] = "Private Auras",
           ["position"] = {
@@ -2283,7 +2284,7 @@ Addon.data.Cell = {
           ["type"] = "built-in",
           ["frameLevel"] = 20,
           ["border"] = 2,
-          ["enabled"] = false,
+          ["enabled"] = true,
           ["num"] = 3,
           ["font"] = {
             {
@@ -2332,14 +2333,14 @@ Addon.data.Cell = {
           },
         },
         {
-          ["enabled"] = true,
+          ["enabled"] = false,
           ["type"] = "built-in",
           ["name"] = "Actions",
           ["indicatorName"] = "actions",
           ["speed"] = 1,
         },
         {
-          ["enabled"] = false,
+          ["enabled"] = true,
           ["type"] = "built-in",
           ["name"] = "Missing Buffs",
           ["position"] = {
@@ -2514,7 +2515,7 @@ Addon.data.Cell = {
         ["spacingX"] = 3,
         ["unitsPerColumn"] = 5,
         ["maxColumns"] = 8,
-        ["orientation"] = "vertical",
+        ["orientation"] = "horizontal",
         ["combineGroups"] = false,
         ["roleOrder"] = {
           "TANK",
@@ -2525,8 +2526,9 @@ Addon.data.Cell = {
         ["groupSpacing"] = 0,
         ["anchor"] = "TOPLEFT",
         ["position"] = {
-          6,
-          786,
+          "TOPLEFT",
+          9.2,
+          -352.4,
         },
         ["powerSize"] = 2,
         ["size"] = {
@@ -2640,11 +2642,11 @@ Addon.data.Cell = {
       },
     },
   },
-  ["crowdControls"] = {
-    ["disabled"] = {
-    },
-    ["custom"] = {
-    },
+  ["bigDebuffs"] = {
+    46392,
+    240443,
+    209858,
+    240559,
   },
   ["quickAssist"] = {
   },
@@ -2986,11 +2988,57 @@ Addon.data.Cell = {
     387847,
     213213,
   },
-  ["dispelBlacklist"] = {
+  ["crowdControls"] = {
+    ["disabled"] = {
+    },
+    ["custom"] = {
+    },
   },
+  ["changelogsViewed"] = "r269-release",
   ["indicatorPreview"] = {
     ["scale"] = 2,
     ["showAll"] = false,
+  },
+  ["dispelRequest"] = {
+    ["enabled"] = false,
+    ["debuffs"] = {
+    },
+    ["timeout"] = 10,
+    ["responseType"] = "all",
+    ["glowOptions"] = {
+      "shine",
+      {
+        {
+          1,
+          0,
+          0.4,
+          1,
+        },
+        0,
+        0,
+        9,
+        0.5,
+        2,
+      },
+    },
+    ["textOptions"] = {
+      "A",
+      {
+        1,
+        1,
+        1,
+        1,
+      },
+      32,
+      "TOPLEFT",
+      "TOPLEFT",
+      -1,
+      5,
+    },
+    ["type"] = "text",
+    ["dispellableByMe"] = true,
+  },
+  ["quickCast"] = {
   },
   ["actions"] = {
     {
@@ -3025,6 +3073,93 @@ Addon.data.Cell = {
           0,
         },
       },
+    },
+  },
+  ["spellRequest"] = {
+    ["enabled"] = false,
+    ["timeout"] = 10,
+    ["checkIfExists"] = true,
+    ["spells"] = {
+      {
+        ["glowOptions"] = {
+          "pixel",
+          {
+            {
+              1,
+              1,
+              0,
+              1,
+            },
+            0,
+            0,
+            9,
+            0.25,
+            8,
+            2,
+          },
+        },
+        ["type"] = "icon",
+        ["spellId"] = 10060,
+        ["isBuiltIn"] = true,
+        ["keywords"] = "Power Infusion",
+        ["iconColor"] = {
+          1,
+          1,
+          0,
+          1,
+        },
+        ["icon"] = 135939,
+        ["buffId"] = 10060,
+      },
+      {
+        ["glowOptions"] = {
+          "pixel",
+          {
+            {
+              0,
+              1,
+              1,
+              1,
+            },
+            0,
+            0,
+            9,
+            0.25,
+            8,
+            2,
+          },
+        },
+        ["type"] = "icon",
+        ["spellId"] = 29166,
+        ["isBuiltIn"] = true,
+        ["keywords"] = "Innervate",
+        ["iconColor"] = {
+          0,
+          1,
+          1,
+          1,
+        },
+        ["icon"] = 136048,
+        ["buffId"] = 29166,
+      },
+    },
+    ["sharedIconOptions"] = {
+      "beat",
+      27,
+      "BOTTOMRIGHT",
+      "BOTTOMRIGHT",
+      0,
+      0,
+    },
+    ["knownSpellsOnly"] = true,
+    ["responseType"] = "me",
+    ["replyCooldown"] = true,
+    ["freeCooldownOnly"] = true,
+  },
+  ["externals"] = {
+    ["disabled"] = {
+    },
+    ["custom"] = {
     },
   },
   ["tools"] = {
@@ -3065,76 +3200,6 @@ Addon.data.Cell = {
       {
       },
     },
-  },
-  ["snippets"] = {
-    [0] = {
-      ["autorun"] = true,
-      ["code"] =
-      "-- snippets can be found at https://github.com/enderneko/Cell/tree/master/.snippets\n-- use \"/run CellDB['snippets'][0]=nil ReloadUI()\" to reset this snippet\n\n-- cooldown style for icon/block indicators (\"VERTICAL\", \"CLOCK\")\nCELL_COOLDOWN_STYLE = \"VERTICAL\"\n\n-- fade out unit button if hp percent > (number: 0-1)\nCELL_FADE_OUT_HEALTH_PERCENT = nil\n\n-- add summon icons to Status Icon indicator (boolean, retail only)\nCELL_SUMMON_ICONS_ENABLED = false\n\n-- use separate width and height for custom indicator icons (boolean)\nCELL_RECTANGULAR_CUSTOM_INDICATOR_ICONS = false\n\n-- Use nicknames from Details! Damage Meter (boolean, NickTag-1.0 library)\nCELL_NICKTAG_ENABLED = false\n\n-- remove raid setup details from the tooltip of the Raid button (boolean)\nCELL_TOOLTIP_REMOVE_RAID_SETUP_DETAILS = false\n\n-- border thickness: unit button and icon (number)\nCELL_BORDER_SIZE = 1\n\n-- unit button border color ({r, g, b, a}, number: 0-1)\nCELL_BORDER_COLOR = {0, 0, 0, 1}\n\n-- show raid pet owner name (\"VEHICLE\", \"NAME\", nil)\nCELL_SHOW_GROUP_PET_OWNER_NAME = nil\n\n-- use LibHealComm (boolean, non-retail)\nCELL_USE_LIBHEALCOMM = false",
-    },
-  },
-  ["changelogsViewed"] = "r269-release",
-  ["targetedSpellsGlow"] = {
-    "Pixel",
-    {
-      0.95,
-      0.95,
-      0.32,
-      1,
-    },
-    9,
-    0.25,
-    8,
-    2,
-  },
-  ["layoutAutoSwitch"] = {
-    ["HUNTER"] = {
-    },
-    ["role"] = {
-      ["DAMAGER"] = {
-        ["raid_instance"] = "Raid",
-        ["party"] = "default",
-        ["solo"] = "hide",
-        ["raid_outdoor"] = "Raid",
-        ["raid_mythic"] = "Raid",
-        ["arena"] = "default",
-        ["battleground15"] = "Raid",
-        ["battleground40"] = "Raid",
-      },
-      ["TANK"] = {
-        ["raid_instance"] = "default",
-        ["party"] = "default",
-        ["solo"] = "default",
-        ["raid_outdoor"] = "default",
-        ["raid_mythic"] = "default",
-        ["arena"] = "default",
-        ["battleground15"] = "default",
-        ["battleground40"] = "default",
-      },
-      ["HEALER"] = {
-        ["raid_instance"] = "default",
-        ["party"] = "default",
-        ["solo"] = "default",
-        ["raid_outdoor"] = "default",
-        ["raid_mythic"] = "default",
-        ["arena"] = "default",
-        ["battleground15"] = "default",
-        ["battleground40"] = "default",
-      },
-    },
-    ["ROGUE"] = {
-    },
-    ["MAGE"] = {
-    },
-    ["DEMONHUNTER"] = {
-    },
-    ["SHAMAN"] = {
-    },
-  },
-  ["optionsFramePosition"] = {
-    "TOP",
-    308.2,
-    -323,
   },
   ["appearance"] = {
     ["optionsFontSizeOffset"] = 0,
@@ -3199,7 +3264,7 @@ Addon.data.Cell = {
       },
     },
     ["barAnimation"] = "Flash",
-    ["texture"] = "Cell Default",
+    ["texture"] = "Blizzard Raid Bar",
     ["shield"] = {
       true,
       {
@@ -3314,11 +3379,71 @@ Addon.data.Cell = {
     ["outOfRangeAlpha"] = 0.45,
   },
   ["fallbackGroupType"] = "solo",
-  ["externals"] = {
-    ["disabled"] = {
+  ["dispelBlacklist"] = {
+  },
+  ["targetedSpellsGlow"] = {
+    "Pixel",
+    {
+      0.95,
+      0.95,
+      0.32,
+      1,
     },
-    ["custom"] = {
+    9,
+    0.25,
+    8,
+    2,
+  },
+  ["layoutAutoSwitch"] = {
+    ["HUNTER"] = {
     },
+    ["role"] = {
+      ["DAMAGER"] = {
+        ["raid_instance"] = "Raid",
+        ["party"] = "default",
+        ["solo"] = "hide",
+        ["raid_outdoor"] = "Raid",
+        ["raid_mythic"] = "Raid",
+        ["arena"] = "default",
+        ["battleground15"] = "Raid",
+        ["battleground40"] = "Raid",
+      },
+      ["TANK"] = {
+        ["raid_instance"] = "default",
+        ["party"] = "default",
+        ["solo"] = "default",
+        ["raid_outdoor"] = "default",
+        ["raid_mythic"] = "default",
+        ["arena"] = "default",
+        ["battleground15"] = "default",
+        ["battleground40"] = "default",
+      },
+      ["HEALER"] = {
+        ["raid_instance"] = "default",
+        ["party"] = "default",
+        ["solo"] = "default",
+        ["raid_outdoor"] = "default",
+        ["raid_mythic"] = "default",
+        ["arena"] = "default",
+        ["battleground15"] = "default",
+        ["battleground40"] = "default",
+      },
+    },
+    ["ROGUE"] = {
+    },
+    ["MAGE"] = {
+    },
+    ["DEMONHUNTER"] = {
+    },
+    ["SHAMAN"] = {
+    },
+  },
+  ["optionsFramePosition"] = {
+    "TOP",
+    308.2,
+    -323,
+  },
+  ["raidDebuffs"] = {
   },
   ["defensives"] = {
     ["disabled"] = {
@@ -3368,130 +3493,6 @@ Addon.data.Cell = {
       ["g"] = 0,
       ["b"] = 0,
     },
-  },
-  ["raidDebuffs"] = {
-  },
-  ["spellRequest"] = {
-    ["enabled"] = false,
-    ["timeout"] = 10,
-    ["checkIfExists"] = true,
-    ["spells"] = {
-      {
-        ["glowOptions"] = {
-          "pixel",
-          {
-            {
-              1,
-              1,
-              0,
-              1,
-            },
-            0,
-            0,
-            9,
-            0.25,
-            8,
-            2,
-          },
-        },
-        ["type"] = "icon",
-        ["spellId"] = 10060,
-        ["isBuiltIn"] = true,
-        ["keywords"] = "Power Infusion",
-        ["iconColor"] = {
-          1,
-          1,
-          0,
-          1,
-        },
-        ["icon"] = 135939,
-        ["buffId"] = 10060,
-      },
-      {
-        ["glowOptions"] = {
-          "pixel",
-          {
-            {
-              0,
-              1,
-              1,
-              1,
-            },
-            0,
-            0,
-            9,
-            0.25,
-            8,
-            2,
-          },
-        },
-        ["type"] = "icon",
-        ["spellId"] = 29166,
-        ["isBuiltIn"] = true,
-        ["keywords"] = "Innervate",
-        ["iconColor"] = {
-          0,
-          1,
-          1,
-          1,
-        },
-        ["icon"] = 136048,
-        ["buffId"] = 29166,
-      },
-    },
-    ["sharedIconOptions"] = {
-      "beat",
-      27,
-      "BOTTOMRIGHT",
-      "BOTTOMRIGHT",
-      0,
-      0,
-    },
-    ["knownSpellsOnly"] = true,
-    ["responseType"] = "me",
-    ["replyCooldown"] = true,
-    ["freeCooldownOnly"] = true,
-  },
-  ["quickCast"] = {
-  },
-  ["dispelRequest"] = {
-    ["enabled"] = false,
-    ["debuffs"] = {
-    },
-    ["timeout"] = 10,
-    ["responseType"] = "all",
-    ["glowOptions"] = {
-      "shine",
-      {
-        {
-          1,
-          0,
-          0.4,
-          1,
-        },
-        0,
-        0,
-        9,
-        0.5,
-        2,
-      },
-    },
-    ["textOptions"] = {
-      "A",
-      {
-        1,
-        1,
-        1,
-        1,
-      },
-      32,
-      "TOPLEFT",
-      "TOPLEFT",
-      -1,
-      5,
-    },
-    ["type"] = "text",
-    ["dispellableByMe"] = true,
   },
   ["revise"] = "r269-release",
   ["targetedSpellsList"] = {
